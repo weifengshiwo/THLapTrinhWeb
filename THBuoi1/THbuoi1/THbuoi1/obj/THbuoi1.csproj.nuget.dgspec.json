@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THBuoi1\\THBuoi1\\THBuoi1.csproj": {}
+    "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THBuoi1\\THBuoi1.csproj": {}
   },
   "projects": {
-    "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THBuoi1\\THBuoi1\\THBuoi1.csproj": {
+    "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THBuoi1\\THBuoi1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THBuoi1\\THBuoi1\\THBuoi1.csproj",
+        "projectUniqueName": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THBuoi1\\THBuoi1.csproj",
         "projectName": "THBuoi1",
-        "projectPath": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THBuoi1\\THBuoi1\\THBuoi1.csproj",
+        "projectPath": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THBuoi1\\THBuoi1.csproj",
         "packagesPath": "C:\\Users\\phong\\.nuget\\packages\\",
         "outputPath": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THBuoi1\\THBuoi1\\obj\\",
         "projectStyle": "PackageReference",

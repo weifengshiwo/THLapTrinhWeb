@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B04B8F4B-00C6-6168-87FE-87EB35520A4C}|THBuoi1\\THBuoi1.csproj|d:\\thlaptrinhweb\\thlaptrinhweb\\thbuoi1\\thbuoi1\\thbuoi1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B04B8F4B-00C6-6168-87FE-87EB35520A4C}|THBuoi1\\THBuoi1.csproj|solutionrelative:thbuoi1\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Product.cs",
+              "DocumentMoniker": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THbuoi1\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "THbuoi1\\Models\\Product.cs",
+              "ToolTip": "D:\\THLaptrinhWeb\\THLapTrinhWeb\\THBuoi1\\THbuoi1\\THbuoi1\\Models\\Product.cs",
+              "RelativeToolTip": "THbuoi1\\Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-18T19:33:16.4Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
