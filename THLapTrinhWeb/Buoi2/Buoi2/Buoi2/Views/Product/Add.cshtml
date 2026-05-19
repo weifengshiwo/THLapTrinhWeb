@@ -1,0 +1,50 @@
+﻿@model GREEN_STORE.Models.Product
+@{
+    ViewData["Title"] = "Thêm Sản Phẩm";
+}
+
+<div class="container mt-4">
+    <h2>Thêm Sản Phẩm Mới</h2>
+    <hr />
+    <form asp-action="Add" method="post" enctype="multipart/form-data">
+        <div asp-validation-summary="All" class="text-danger"></div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="control-label">Tên sản phẩm</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Price" class="control-label">Giá bán</label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="control-label">Mô tả sản phẩm</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="CategoryId" class="control-label">Danh mục sản phẩm</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="imageUrl" class="control-label">Hình ảnh đại diện</label>
+            <input type="file" name="imageUrl" class="form-control" accept="image/*" />
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="imageUrls" class="control-label">Các hình ảnh phụ khác (Có thể chọn nhiều)</label>
+            <input type="file" name="imageUrls" class="form-control" accept="image/*" multiple />
+        </div>
+
+        <div class="form-group mt-4">
+            <button type="submit" class="btn btn-success">Thêm mới</button>
+            <a asp-action="Index" class="btn btn-secondary">Quay lại danh sách</a>
+        </div>
+    </form>
+</div>

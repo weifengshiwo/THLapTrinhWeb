@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GREEN STORE</title>
+
+    <link rel="icon" type="image/png" href="~/favicon.png" />
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebProductManagement.styles.css" asp-append-version="true" />
+
+    <style>
+        .navbar {
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            position: relative;
+        }
+            /* Hiệu ứng gạch chân mượt mà khi hover qua các menu */
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #198754; /* Màu xanh lá chuẩn Green Store */
+                transition: width 0.3s ease;
+            }
+
+            .nav-link:hover::after {
+                width: 100%;
+            }
+
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #198754 !important;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>
+        <nav class="navbar navbar-expand-md navbar-light bg-white border-bottom mb-4">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" asp-controller="Product" asp-action="Index">
+                    <i class="bi bi-tree-fill me-2"></i> GREEN STORE
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse" id="navbarContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Product" asp-action="Index">
+                                <i class="bi bi-house-door me-1"></i> Trang Chủ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-controller="Product" asp-action="Add">
+                                <i class="bi bi-plus-circle me-1"></i> Quản Lý Kho
+                            </a>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex mx-auto col-12 col-md-5 mb-2 mb-md-0" role="search" action="#" method="get">
+                        <div class="input-group">
+                            <input class="form-control" type="search" placeholder="Tìm sản phẩm..." aria-label="Search">
+                            <button class="btn btn-success" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="d-flex align-items-center ms-md-auto">
+                        <a href="#" class="btn btn-outline-dark position-relative me-3 rounded-circle p-2" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                            <i class="bi bi-cart3"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                3 <span class="visually-hidden">sản phẩm</span>
+                            </span>
+                        </a>
+
+                        <a href="#" class="btn btn-light rounded-circle p-2" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;" title="Tài khoản">
+                            <i class="bi bi-person-circle"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container flex-grow-1">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted py-3 bg-light mt-auto">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    &copy; @DateTime.Now.Year - <strong>GREEN STORE</strong> - HUTECH Web Project
+                </div>
+                <div class="col-md-6 text-center text-md-end-style mt-2 mt-md-0">
+                    <span class="badge bg-success-subtle text-success px-3 py-2">Hệ thống Demo Học tập</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

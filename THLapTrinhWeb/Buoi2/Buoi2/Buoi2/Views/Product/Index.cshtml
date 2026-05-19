@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GREEN_STORE.Models.Product>
+@{
+    ViewData["Title"] = "Danh Sách Sản Phẩm";
+}
+
+<div class="container mt-4">
+    <h2>Danh Sách Sản Phẩm</h2>
+    <p>
+        <a asp-action="Add" class="btn btn-primary">Thêm Sản Phẩm Mới</a>
+    </p>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá bán</th>
+                <th>Mô tả</th>
+                <th>Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>
+                        @if (!string.IsNullOrEmpty(product.ImageUrl))
+                        {
+                            <img src="@product.ImageUrl" alt="Product Image" style="width: 60px; height: auto;" />
+                        }
+                        else
+                        {
+                            <span>Không có ảnh</span>
+                        }
+                    </td>
+                    <td>@product.Name</td>
+                    <td>@product.Price.ToString("C")</td>
+                    <td>@product.Description</td>
+                    <td>
+                        <a asp-action="Display" asp-route-id="@product.Id" class="btn btn-info btn-sm">Xem</a> |
+                        <a asp-action="Update" asp-route-id="@product.Id" class="btn btn-warning btn-sm">Sửa</a> |
+                        <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger btn-sm">Xóa</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

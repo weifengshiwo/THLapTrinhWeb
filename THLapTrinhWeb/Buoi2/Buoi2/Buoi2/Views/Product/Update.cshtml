@@ -1,0 +1,40 @@
+﻿@model GREEN_STORE.Models.Product
+@{
+    ViewData["Title"] = "Chỉnh Sửa Sản Phẩm";
+}
+
+<div class="container mt-4">
+    <h2>Chỉnh Sửa Sản Phẩm</h2>
+    <hr />
+    <form asp-action="Update" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group mb-3">
+            <label asp-for="Name" class="control-label">Tên sản phẩm</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Price" class="control-label">Giá bán</label>
+            <input asp-for="Price" class="form-control" />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="Description" class="control-label">Mô tả sản phẩm</label>
+            <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group mb-3">
+            <label asp-for="CategoryId" class="control-label">Danh mục sản phẩm</label>
+            <select asp-for="CategoryId" asp-items="ViewBag.Categories" class="form-control"></select>
+        </div>
+
+        <div class="form-group mt-4">
+            <button type="submit" class="btn btn-warning">Cập nhật sản phẩm</button>
+            <a asp-action="Index" class="btn btn-secondary">Hủy bỏ</a>
+        </div>
+    </form>
+</div>

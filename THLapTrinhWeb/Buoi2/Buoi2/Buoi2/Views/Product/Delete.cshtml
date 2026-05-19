@@ -1,0 +1,20 @@
+﻿@model WebProductManagement.Models.Product
+@{
+    ViewData["Title"] = "Xác Nhận Xóa";
+}
+
+<div class="container mt-4">
+    <h2 class="text-danger">Bạn có chắc chắn muốn xóa sản phẩm này không?</h2>
+    <hr />
+    <div class="card p-3 bg-light">
+        <h4>Tên sản phẩm: <span class="text-danger">@Model.Name</span></h4>
+        <p><strong>Giá bán:</strong> @Model.Price.ToString("C")</p>
+        <p><strong>Mô tả:</strong> @Model.Description</p>
+    </div>
+
+    <form asp-action="DeleteConfirmed" method="post" class="mt-4">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger">Xác nhận Xóa</button> |
+        <a asp-action="Index" class="btn btn-secondary">Hủy và Quay lại</a>
+    </form>
+</div>
